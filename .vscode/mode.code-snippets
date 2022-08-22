@@ -1,0 +1,32 @@
+{
+  "Generate Model": {
+    "prefix": "generate:model",
+    "body": [
+      "import { JSONSchema, Model, RelationMappings } from \"objection\";",
+      "",
+      "export class ${TM_FILENAME/(.*)\\.model\\.ts/${1:/pascalcase}/g} extends Model {",
+      "  static get tableName(): string {",
+      "    return \"${TM_FILENAME/(.*)\\.model\\.ts/${1}/g}\";",
+      "  }",
+      "",
+      "  static get idColumn() {",
+      "    return \"id\";",
+      "  }",
+      "",
+      "  static get jsonSchema(): JSONSchema {",
+      "    return {",
+      "      type: \"object\",",
+      "      required: [],",
+      "      properties: {},",
+      "    };",
+      "  }",
+      "",
+      "  static get relationMappings(): RelationMappings {",
+      "    return {};",
+      "  }",
+      "}",
+      ""
+    ],
+    "description": "Generate Model"
+  }
+}

@@ -1,0 +1,19 @@
+{
+  "compileOnSave": true,
+  "compilerOptions": {
+    "target": "ES5",
+    "allowJs": true,
+    "watch": true,
+    "outDir": "./dist",
+    "esModuleInterop": true,
+    "baseUrl": "./src",
+    "paths": {
+      "@models/*": ["models/*"],
+      "@libs/*": ["libs/*"],
+      "@schemas/*": ["schemas/*"],
+      "@repositories/*": ["repositories/*"],
+      "@services/*": ["services/*"],
+      "@configuration/*": ["./configuration/*"]
+    }
+  }
+}
